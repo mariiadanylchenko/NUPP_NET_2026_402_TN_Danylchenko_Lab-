@@ -1,0 +1,29 @@
+[
+  {
+    "Id": "b3282e53-e8b0-40a7-acd2-4b2a2fb4beef",
+    "Title": "\u0417\u0430\u0445\u0430\u0440 \u0411\u0435\u0440\u043A\u0443\u0442",
+    "Isbn": "978-966-01-0001",
+    "PublishedYear": 1883,
+    "Price": 175,
+    "AuthorId": "6fe29327-b6c1-47b6-a0d3-95d78a4483ff",
+    "GenreId": "1b7d7393-666a-4da7-93eb-64c44aef4823"
+  },
+  {
+    "Id": "8182c7a7-5913-4e9a-b78f-c4baf54508f1",
+    "Title": "\u041C\u0430\u0440\u0443\u0441\u044F \u0427\u0443\u0440\u0430\u0439",
+    "Isbn": "978-966-01-0002",
+    "PublishedYear": 1979,
+    "Price": 180.5,
+    "AuthorId": "7e449bd5-233c-4ccf-80fd-680bc8714ad4",
+    "GenreId": "780c0e25-7c62-4f98-91d2-e2b3f35438cc"
+  },
+  {
+    "Id": "aaa4638c-6179-4924-91aa-5eb5d223137a",
+    "Title": "\u041F\u0435\u0440\u0435\u0445\u0440\u0435\u0441\u043D\u0456 \u0441\u0442\u0435\u0436\u043A\u0438",
+    "Isbn": "978-966-01-0004",
+    "PublishedYear": 2015,
+    "Price": 210,
+    "AuthorId": "7e449bd5-233c-4ccf-80fd-680bc8714ad4",
+    "GenreId": "780c0e25-7c62-4f98-91d2-e2b3f35438cc"
+  }
+]
