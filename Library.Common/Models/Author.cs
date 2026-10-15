@@ -43,6 +43,19 @@ public class Author : Person
         OnBookPublished?.Invoke(this, bookTitle);
     }
 
+    private static readonly string[] _firstNames = { "Іван", "Олена", "Микола", "Тарас", "Леся", "Павло", "Ганна", "Василь" };
+    private static readonly string[] _lastNames = { "Франко", "Пчілка", "Хвильовий", "Шевченко", "Українка", "Тичина", "Барвінок", "Стус" };
+
+    // статичний метод — створює автора зі згенерованими даними
+    public static Author CreateNew()
+    {
+        var rng = new Random();
+        var fn = _firstNames[rng.Next(_firstNames.Length)];
+        var ln = _lastNames[rng.Next(_lastNames.Length)];
+        return new Author(fn, ln, $"{fn.ToLower()}@lib.ua",
+            $"{fn[0]}{ln[0]}", rng.Next(1800, 2000), "Відомий письменник.");
+    }
+
     // статичний метод — повертає кількість авторів
     public static int GetAuthorCount() => _authorCount;
 

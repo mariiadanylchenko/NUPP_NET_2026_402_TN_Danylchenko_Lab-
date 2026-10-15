@@ -30,6 +30,14 @@ public class Genre
     public string Name { get; set; } = string.Empty;
     public string Description { get; set; } = string.Empty;
 
+    // статичний метод — створює жанр зі згенерованими даними
+    public static Genre CreateNew()
+    {
+        var rng = new Random();
+        var name = _availableGenres[rng.Next(_availableGenres.Count)];
+        return new Genre(name, $"Жанр: {name}");
+    }
+
     // статичний метод — список доступних жанрів
     public static IReadOnlyList<string> GetAvailableGenres() => _availableGenres;
 
