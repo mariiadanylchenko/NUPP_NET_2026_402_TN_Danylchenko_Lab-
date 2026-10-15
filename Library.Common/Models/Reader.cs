@@ -44,6 +44,20 @@ public class Reader : Person
             BorrowedBooksCount--;
     }
 
+    private static readonly string[] _firstNames = { "Марія", "Андрій", "Оксана", "Дмитро", "Наталя", "Сергій", "Ірина", "Богдан" };
+    private static readonly string[] _lastNames = { "Коваль", "Мельник", "Бондаренко", "Ткаченко", "Кравченко", "Олійник", "Шевченко", "Поліщук" };
+
+    // статичний метод — створює читача зі згенерованими даними
+    public static Reader CreateNew()
+    {
+        var rng = new Random();
+        var fn = _firstNames[rng.Next(_firstNames.Length)];
+        var ln = _lastNames[rng.Next(_lastNames.Length)];
+        return new Reader(fn, ln, $"{fn.ToLower()}@mail.ua",
+            $"LIB-{rng.Next(1000, 9999)}",
+            DateTime.Now.AddDays(-rng.Next(0, 3650)));
+    }
+
     // статичний метод — перевірка чи читач може взяти більше книг
     public static bool CanBorrow(Reader reader) =>
         reader.BorrowedBooksCount < MaxBorrowLimit;
